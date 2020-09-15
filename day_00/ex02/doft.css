@@ -1,0 +1,112 @@
+html {
+	background: #505050;
+}
+.top {
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px;
+	float: top;
+	width: 1180px;
+	height: 120px;
+	background: #909090;
+}
+
+.meme {
+	margin: auto;
+	width: 1460px;
+}
+.left {
+	box-shadow: 10px 10px 5px;
+	border-radius: 10px;
+	float: left;
+	margin-top: 15px;
+	margin-left: 15px;
+	width: 100px;
+	height: 425px;
+	background: #909090;
+}
+.center {
+	box-shadow: 10px 10px 5px;
+	border-radius: 10px;
+	float: left;
+	margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+	width: 920px;
+	height: 525px;
+	background: #909090;
+}
+.right {
+	box-shadow: 10px 10px 5px;
+	border-radius: 10px;
+	float: left;
+	margin-top: 15px;
+	margin-right: 15px;
+	width: 100px;
+	height: 425px;
+	background: #909090;
+}
+#topimage {
+	margin-left: 10px;
+	width: 400px;
+}
+#refresh {
+	width: 20px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+#x {
+	width: 20px;
+	margin-top: 80px;
+}
+#glass {
+	margin-left: 490px;
+	width: 230px;
+}
+#cluster {
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 900px;
+}
+#eye {
+	border:4px solid red;
+	border-radius: 10px;
+}
+#dude {
+	margin-left: 15px;
+}
+#please {
+	margin-left: 15px;
+	width: 240px;
+}
+.wall {
+	display: flex;
+	background-image: url('resources/brick.jpg');
+	margin: 5px 0px 0 10px;
+	height: 70px;
+	width: 80px;
+}
+.flowright {
+	float: right;
+}
+.flowleft {
+	float: left;
+}
+.leftbar {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 80px;
+}
+.bottom_text {
+	box-shadow: 10px 10px 5px;
+	border-radius: 10px;
+	width: 390px;
+	height: 160px;
+	background: #85FF91;
+	position: absolute;
+	top: 600px;
+	right: -50;
+	padding: 10px;
+}
+.big {
+	font-size: 200%;
+}

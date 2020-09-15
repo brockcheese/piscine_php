@@ -1,0 +1,49 @@
+html {
+	background-color: white;
+}
+td {
+	font-size: 1vw;
+	font-size: 1vh;
+}
+.symbol {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1vw;
+	font-size: 1vh;
+}
+.weight {
+	text-align: right ;
+}
+.number {
+	text-align: left;
+}
+.am {
+	background-color: #F0F;
+}
+.ae {
+	background-color: #AD49FD;
+}
+.tm {
+	background-color: #35D1FF;
+}
+.bm {
+	background-color: orange;
+}
+.s {
+	background-color: green;
+}
+.n {
+	background-color: #329EFF;
+}
+.h {
+	background-color: yellow;
+}
+.ng {
+	background-color: gold;
+}
+.l {
+	background-color: #C1FF01;
+}
+.a {
+	background-color: #FF0202;
+}

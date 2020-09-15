@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculator</title>
+
+	</head>
+	<body>
+		<form>
+			<input type="text" name="lnum" id="lnum">
+			<select name="operators" id="op">
+				<option value="+">&#43;</option>
+				<option value="-">&#45;</option>
+				<option value="*">&#42;</option>
+				<option value="/">&#47;</option>
+				<option value="%">&#37;</option>
+			</select>
+			<input type="text" name="rnum" id="rnum">
+			<input type="submit" value="Try me!" id="sub">
+		</form>
+	</body>
+	<script>
+		const SUB = document.querySelector("#sub");
+
+		function printAns(nbr) {
+			alert(nbr);
+			console.log(nbr);
+		}
+
+		function runFunction(e) {
+			e.preventDefault();
+			const NUMONE = document.querySelector("#lnum");
+			const NUMTWO = document.querySelector("#rnum");
+			const OP = document.querySelector("#op");
+			if((NUMONE.value == "" || NUMTWO.value== "") || (isNaN(NUMONE.value) || isNaN(NUMTWO.value)) || (parseInt(NUMONE.value) < 0 || parseInt(NUMTWO.value) < 0)) {
+				alert("Error :(");
+			} else if (NUMTWO.value == "0" && (OP.value == '%' || OP.value == '/')) {
+				alert("It's over 9000!");
+				console.log("It's over 9000!");
+			} else {
+				int1 = parseInt(NUMONE.value);
+				int2 = parseInt(NUMTWO.value);
+				switch(OP.value) {
+					case ("+"):
+						ans = int1 + int2;
+						break;
+					case ("-"):
+						ans = int1 - int2;
+						break;
+					case ("*"):
+						ans = int1 * int2;
+						break;
+					case ("/"):
+						ans = int1 / int2;
+						break;
+					case ("%"):
+						ans = int1 % int2;
+						break;
+				}
+				printAns(ans);
+			}
+		}
+
+		function popUp() {
+			alert("Please, use me...")
+		}
+
+		SUB.addEventListener('click', function(e){runFunction(e);});
+		var interval = setInterval(popUp, 30000)
+	</script>
+</html>

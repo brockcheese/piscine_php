@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Calculator</title>
+		<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<form>
+			<input type="text" name="lnum" id="lnum">
+			<select name="operators" id="op">
+				<option value="+">&#43;</option>
+				<option value="-">&#45;</option>
+				<option value="*">&#42;</option>
+				<option value="/">&#47;</option>
+				<option value="%">&#37;</option>
+			</select>
+			<input type="text" name="rnum" id="rnum">
+			<input type="submit" value="Try me!" id="sub">
+		</form>
+	</body>
+	<script>
+		$(document).ready(function(){
+			left = $("#lnum");
+			right = $("#rnum");
+			op = $('#op');
+			sub = $('#sub');
+			sub.click(runFunction);
+			setInterval(popup, 3000);
+		});
+
+		function printAns(nbr) {
+			alert(nbr);
+			console.log(nbr);
+		}
+
+		function runFunction(event) {
+			event.preventDefault();
+			if((left.val() == "" || right.val()== "") || (isNaN(left.val()) || isNaN(right.val())) || (parseInt(left.val()) < 0 || parseInt(right.val()) < 0)) {
+				alert("Error :(");
+			} else if (right.val() == "0" && (op.val() == '%' || op.val() == '/')) {
+				alert("It's over 9000!");
+				console.log("It's over 9000!");
+			} else {
+				int1 = parseInt(left.val());
+				int2 = parseInt(right.val());
+				switch(op.val()) {
+					case ("+"):
+						ans = int1 + int2;
+						break;
+					case ("-"):
+						ans = int1 - int2;
+						break;
+					case ("*"):
+						ans = int1 * int2;
+						break;
+					case ("/"):
+						ans = int1 / int2;
+						break;
+					case ("%"):
+						ans = int1 % int2;
+						break;
+				}
+				printAns(ans);
+			}
+		}
+
+		function popUp() {
+			alert("Please, use me...")
+		}
+	</script>
+</html>

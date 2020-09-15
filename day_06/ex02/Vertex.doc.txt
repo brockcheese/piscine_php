@@ -1,0 +1,47 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles a point in space.
+
+An instance can be contructed from distinct x, y, z constitutives:
+new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );
+
+Or with optional w and color constitutives:
+$white   = new Color( array( 'red' => 255, 'green' =>   255, 'blue' =>   255 ) );
+new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0, 'w' => 1.0, 'color' => $white ) );
+
+X, y, z, w constitutives are axis coordinates that represent a point in space.
+The color constitutive must be a variable of the Color instance.
+Any other use is undefined behaviour.
+
+The class provides the following methods :
+
+Vertex   readx();
+Returns the value of x as a float.
+
+Vertex   ready();
+Returns the value of y as a float.
+
+Vertex   readz();
+Returns the value of z as a float.
+
+Vertex   readw();
+Returns the value of w as a float.
+
+Vertex   readColor();
+Returns the value of color as a Color instance.
+
+Vertex   writex($x);
+Updates the value of x to the float passed as an argument.
+
+Vertex   writey($y);
+Updates the value of y to the float passed as an argument.
+
+Vertex   writez($z);
+Updates the value of z to the float passed as an argument.
+
+Vertex   writew ($w);
+Updates the value of w to the float passed as an argument.
+
+Vertex   writeColor($color);
+Updates the value of color to the Color instance passed as an argument.
+---------------------------------------------------------------------- Vertex ->

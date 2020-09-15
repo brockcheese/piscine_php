@@ -1,0 +1,59 @@
+
+<- Vector ----------------------------------------------------------------------
+The Vertor class handles two points in space.
+
+An instance can be contructed from a distinct vertex constitutive:
+$dest = new Vertex( array( 'x' => 1.0, 'y' => 1.0, 'z' => 1.0 ) );
+new Vector( array( 'dest' => $dest ) );
+
+Or with an optional origin vertex constitutive:
+$dest = new Vertex( array( 'x' => 1.0, 'y' => 1.0, 'z' => 1.0 ) );
+$orig = new Vertex( array( 'x' => 0.0, 'y' => 0.0, 'z' => 0.0 ) );
+new Vector( array( 'dest' => $dest, 'orig' => $orig ) );
+
+Dest, and orig constitutives are vertexes that represent a vector.
+The dest, and orig constitutives must be a variable of the Vertex instance.
+Any other use is undefined behaviour.
+
+The class provides the following methods :
+
+Vector   readx();
+Returns the value of x as a float.
+
+Vector   ready();
+Returns the value of y as a float.
+
+Vector   readz();
+Returns the value of z as a float.
+
+Vector   readw();
+Returns the value of w as a float.
+
+Vector   magnitude();
+Returns the vector's length as a float.
+
+Vector   normalize();
+Returns a normalized version of the vector.
+If the vector is already normalized, returns a fresh copy of the vector.
+
+Vector   add($rhs);
+Returns the sum vector of both vectors.
+
+Vector   sub($rhs);
+Returns the difference vector of both vectors.
+
+Vector   opposite();
+Returns the opposite vector.
+
+Vector   scalarProduct($k);
+Returns the multiplication of the vector with a scalar.
+
+Vector   dotProduct($rhs);
+Returns the scalar multiplication of both vectors as a float.
+
+Vector   cos($rhs);
+Returns the angle'sAppendix cosine between both vectors as a float.
+
+Vector   crossProduct($rhs);
+Returns the cross multiplication of both vectors in right-hand mark.
+---------------------------------------------------------------------- Vector ->

@@ -1,0 +1,9 @@
+body {
+	background-image: url('img/cheese_bkg.jpg');
+}
+
+.logo {
+	float: right;
+	background-color: whitesmoke;
+
+}
